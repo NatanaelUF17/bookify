@@ -15,9 +15,21 @@
     <Folder Include="Users/" />
     <Folder Include="Users/Events" />
     <Folder Include="Users/Records" />
+    <Folder Include="Abstractions\Interfaces\Repository\" />
+    <Folder Include="Bookings\" />
+    <Folder Include="Bookings\Records\" />
+    <Folder Include="Bookings\Enums\" />
+    <Folder Include="Bookings\Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Abstractions\Interfaces\Repository\" />
+    <None Remove="Bookings\" />
+    <None Remove="Bookings\Records\" />
+    <None Remove="Bookings\Enums\" />
+    <None Remove="Bookings\Services\" />
   </ItemGroup>
 </Project>
