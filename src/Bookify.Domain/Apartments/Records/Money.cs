@@ -1,4 +1,4 @@
-namespace Bookify.Domain.Records;
+namespace Bookify.Domain.Apartments.Records;
 
 public record Money(decimal Amount, Currency Currency)
 {

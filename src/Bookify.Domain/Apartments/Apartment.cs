@@ -1,8 +1,8 @@
 using Bookify.Domain.Abstractions;
-using Bookify.Domain.Enums;
-using Bookify.Domain.Records;
+using Bookify.Domain.Apartments.Enums;
+using Bookify.Domain.Apartments.Records;
 
-namespace Bookify.Domain.Entities;
+namespace Bookify.Domain.Apartments;
 
 public sealed class Apartment : Entity
 {
