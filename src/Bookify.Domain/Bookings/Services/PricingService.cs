@@ -1,5 +1,5 @@
 ﻿using Bookify.Domain.Apartments;
-using Bookify.Domain.Apartments.Records;
+using Bookify.Domain.Shared.Records;
 using Bookify.Domain.Bookings.Records;
 using Bookify.Domain.Apartments.Enums;
 
@@ -7,7 +7,7 @@ namespace Bookify.Domain.Bookings.Services;
 
 public class PricingService
 {
-	public PricingDetails = CalculatePrice(Apartment apartment, DateRange period)
+	public PricingDetails CalculatePrice(Apartment apartment, DateRange period)
 	{
 		var currency = apartment.Price.Currency;
 
@@ -26,10 +26,23 @@ public class PricingService
 			};
 		}
 
-		var amenitiesUpCharge = Money.Zero();
+		var amenitiesUpCharge = Money.Zero(currency);
 		if (pertentageUpCharge > 0)
 		{
 			amenitiesUpCharge = new Money(priceForPeriod.Amount * pertentageUpCharge, currency);
 		}
+
+		var totalPrice = Money.Zero();
+
+		totalPrice += priceForPeriod;
+
+		if (!apartment.CleaningFee.IsZero())
+		{
+			totalPrice += apartment.CleaningFee;
+		}
+
+		totalPrice += amenitiesUpCharge;
+
+		return new PricingDetails(priceForPeriod, apartment.CleaningFee, amenitiesUpCharge, totalPrice);
 	}
 }

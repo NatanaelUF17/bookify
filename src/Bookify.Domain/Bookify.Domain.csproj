@@ -20,6 +20,9 @@
     <Folder Include="Bookings\Records\" />
     <Folder Include="Bookings\Enums\" />
     <Folder Include="Bookings\Services\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Shared\Records\" />
+    <Folder Include="Bookings\Events\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,5 +34,8 @@
     <None Remove="Bookings\Records\" />
     <None Remove="Bookings\Enums\" />
     <None Remove="Bookings\Services\" />
+    <None Remove="Shared\" />
+    <None Remove="Shared\Records\" />
+    <None Remove="Bookings\Events\" />
   </ItemGroup>
 </Project>
