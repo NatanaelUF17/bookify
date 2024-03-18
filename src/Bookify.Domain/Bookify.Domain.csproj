@@ -23,6 +23,8 @@
     <Folder Include="Shared\" />
     <Folder Include="Shared\Records\" />
     <Folder Include="Bookings\Events\" />
+    <Folder Include="Reviews\Records\" />
+    <Folder Include="Reviews\Enums\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,5 +39,7 @@
     <None Remove="Shared\" />
     <None Remove="Shared\Records\" />
     <None Remove="Bookings\Events\" />
+    <None Remove="Reviews\Records\" />
+    <None Remove="Reviews\Enums\" />
   </ItemGroup>
 </Project>
